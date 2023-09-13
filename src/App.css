@@ -12,8 +12,25 @@
   padding-inline-start: 20px;
 } */
 
+body {
+  background-image: url(./images/background1.jpg);
+  background-size: cover;
+  font-family: 'New Super Mario Font U', sans-serif;
+  font-family: 'Super Mario 256', sans-serif;
+  /* background-position: 20px; */
+}
+
+h1 {
+  text-align: center;
+  font-family: 'New Super Mario Font U', sans-serif;
+  font-family: 'Super Mario 256', sans-serif;
+                                                
+}
+
 .game {
   display: flex;
+  justify-content: center;
+  max-width: 1500px;
 }
 
 .status {
@@ -31,7 +48,7 @@
   /* border: 2px solid blue; */
   width: 20%;
   margin-left: 5%;
-  padding-top: 30px;
+  padding-top: 36px;
 }
 
 .game-info ol {
@@ -41,7 +58,7 @@
 }
 
 .boardContainer {
-  height: 500px;
+  height:500px;
   width: 500px;
   /* border: 1px solid red; */
   margin-left: 20%;
@@ -97,7 +114,21 @@ background-size: cover;
   
 }
 
+.moveButton {
+  padding: 12px 24px;
+  border-radius:50%;
+  background-color: #f3cc0a;
+  border-color: red;
+  border-width: 4px;
+  font-family: 'New Super Mario Font U', sans-serif;
+  font-family: 'Super Mario 256', sans-serif;
+  color: #f2f2f2;
+}
 
+ol {
+  list-style-type: none;
+  
+}
 /* STRETCH STUFF
 animation-name: stretch;
 animation-duration: 2.0s;
@@ -155,3 +186,16 @@ animation-play-state: running;
 .game-info {
   margin-left: 20px;
 } */
+
+.hidden {
+  display: none;
+}
+
+.victoryAnimation {
+  animation-name: stretch;
+  animation-duration: 2.0s;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
