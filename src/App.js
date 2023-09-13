@@ -118,7 +118,9 @@ export default function Game() {
 
   return (
     <>
-      <h1>Tic-Tac-Toad</h1>
+      <div className='scroll-container'>
+      <h1 className='scroll-text'><span className='titleFirstWord'>Tic</span>-<span className='titleSecondWord'>Tac</span>-<span className='titleThirdWord'>Toad</span></h1>
+      </div>
       <div className="game">
         <div className="game-board">
           <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />

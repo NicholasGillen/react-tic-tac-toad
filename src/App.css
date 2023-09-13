@@ -26,6 +26,16 @@ h1 {
   font-family: 'Super Mario 256', sans-serif;
                                                 
 }
+.titleFirstWord{
+  color: #f81c03;
+  
+}
+.titleSecondWord {
+  color: #144bb0;
+}
+.titleThirdWord {
+  color: #f3cc0a;
+}
 
 .game {
   display: flex;
@@ -122,6 +132,7 @@ background-size: cover;
   border-width: 4px;
   font-family: 'New Super Mario Font U', sans-serif;
   font-family: 'Super Mario 256', sans-serif;
+  
   color: #f2f2f2;
 }
 
@@ -198,4 +209,49 @@ animation-play-state: running;
   animation-direction: alternate;
   animation-iteration-count: infinite;
   animation-play-state: running;
+}
+
+/* SCROLL TITLE */
+
+.scroll-container {
+overflow: hidden;
+}
+
+.scroll-text {
+/* height: 100%;
+text-align: center; */
+
+/* animation properties */
+-moz-transform: translateY(-100%);
+-webkit-transform: translateY(-100%);
+transform: translateY(-100%);
+
+-moz-animation: my-animation 5s linear infinite;
+-webkit-animation: my-animation 5s linear infinite;
+animation: my-animation 5s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+from { -moz-transform: translateY(-100%); }
+to { -moz-transform: translateY(100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+from { -webkit-transform: translateY(-100%); }
+to { -webkit-transform: translateY(100%); }
+}
+
+@keyframes my-animation {
+from {
+  -moz-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+to {
+  -moz-transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
 }
