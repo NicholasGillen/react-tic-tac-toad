@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 import victorySound from "./sounds/toadWinner2.mp3";
 import goodChoice from "./sounds/goodChoice.m4a";
+import captainToad from "./sounds/captainToad.mp3";
 
 function playVictorySound() {
   new Audio(victorySound).play();
@@ -12,7 +13,9 @@ function playVictorySound() {
 function playGoodChoice() {
   new Audio(goodChoice).play();
 }
-
+function playCaptainToad() {
+  new Audio(captainToad).play();
+}
 let winningLineTest;
 
 function Square({id, value, onSquareClick}) {
@@ -56,12 +59,12 @@ function Board({xIsNext, squares, onPlay}) {
   let winningLine;
   if (winner) {
     playVictorySound();
-    status = "Winner: " + winner[0];
+    status = "Winner: " + (winner[0]=="X" ? "RED TOAD" : "BLUE TOAD");
     winningLine = winner[1];
     winningLineTest = winningLine;
     // animateWinningLine(winningLine);
   } else {
-    status = "Next player: " + (xIsNext ? "X" : "O");
+    status = "Next player: " + (xIsNext ? "RED TOAD" : "BLUE TOAD");
   }
   return (
     <>
